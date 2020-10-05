@@ -6,6 +6,9 @@ const port = 3000
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+// static serve
+app.use('/static', express.static('public'))
+
 // api data
 let lists = [
     { 
