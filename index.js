@@ -6,6 +6,11 @@ const port = 3000
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+// root 
+app.get('/', (req, res) => {
+    res.send('Please make a request to /api or /static')
+})
+
 // static serve
 app.use('/static', express.static('public'))
 
